@@ -574,7 +574,7 @@ dl.logos:nth-of-type(odd) {
         background-color: transparent;
         font-weight: 700;
         text-transform: uppercase;
-        color: #294070;
+        color: #0058b1;
         font-size: inherit
     }
     .top-share div:first-child a:hover {
@@ -588,7 +588,7 @@ dl.logos:nth-of-type(odd) {
         vertical-align: middle;
         font-weight: 700;
         text-transform: uppercase;
-        color: #294070;
+        color: #0058b1;
         padding-right: 5px
     }
     .top-share div:last-child a {
