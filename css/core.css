@@ -105,6 +105,10 @@ body {
     line-height: 1.5
 }
 
+strong {
+    font-weight: bold;
+}
+
 ol,
 ul {
     list-style: none
