@@ -168,6 +168,12 @@ body {
     overflow-x: hidden
 }
 
+@media screen and (max-width: 767px) {
+    body {
+        padding-top: 36px;
+    }
+}
+
 a {
     color: #e5bb2c
 }
