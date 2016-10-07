@@ -289,8 +289,8 @@ window.components.petitions = function (doc, win) {
     /**
      * Attaches all the listeners all the places
      * */
-    countryLabel.addEventListener('click', toggleCountryField);
-    countrySelect.addEventListener('change', updateZIPPlaceholder);
+    // countryLabel.addEventListener('click', toggleCountryField);
+    // countrySelect.addEventListener('change', updateZIPPlaceholder);
     petitionSignatureForm.addEventListener('submit', submitForm);
   }
 
@@ -370,22 +370,22 @@ window.components.petitions = function (doc, win) {
 
   triggerComponents();
 
-  var xhr = new XMLHttpRequest();
+  // var xhr = new XMLHttpRequest();
 
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4 && xhr.status == 200)
-    {
-      var response = JSON.parse(xhr.response);
-      if (response.country && response.country.iso_code) {
-        var country = response.country.iso_code;
-        var option = document.getElementById('select-country').querySelector('option[value="'+country+'"');
-        if (option)
-          option.selected = true;
-      }
-    }
-  };
-  xhr.open("get", 'https://fftf-geocoder.herokuapp.com', true);
-  xhr.send();
+  // xhr.onreadystatechange = function() {
+  //   if (xhr.readyState === 4 && xhr.status == 200)
+  //   {
+  //     var response = JSON.parse(xhr.response);
+  //     if (response.country && response.country.iso_code) {
+  //       var country = response.country.iso_code;
+  //       var option = document.getElementById('select-country').querySelector('option[value="'+country+'"');
+  //       if (option)
+  //         option.selected = true;
+  //     }
+  //   }
+  // };
+  // xhr.open("get", 'https://fftf-geocoder.herokuapp.com', true);
+  // xhr.send();
 
   if (window.location.href.indexOf('optout') !== -1)
     document.getElementById('opt-in').checked = false; //
