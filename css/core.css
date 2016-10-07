@@ -163,7 +163,7 @@ body {
     font-family: Open Sans, Arial, sans-serif;
     position: relative;
     background: #01091c url(../images/background.jpg) center top no-repeat;
-    padding: 200px 15px;
+    padding: 80px 15px;
     color: #fff;
     overflow-x: hidden
 }
@@ -457,135 +457,8 @@ dl:last-of-type dd:last-of-type p a:hover {
     }
 }
 
-#loader {
-    position: absolute;
-    left: 50%;
-    top: 45px;
-    margin-left: -65px;
-    width: 130px;
-    height: 130px;
-    padding: 15px
-}
-
-.spinner {
-    position: relative;
-    display: block;
-    width: 100%;
-    height: 100%
-}
-
-.spinner .blade {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    margin-top: -4%;
-    height: 7%;
-    width: 100%
-}
-
-.spinner .blade>div {
-    width: 22%;
-    margin: 0 0 0 auto;
-    height: 100%;
-    background: #fff;
-    border-radius: 750pt;
-    opacity: 1;
-    animation-duration: 2s;
-    animation-name: b;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite
-}
-
-.spinner .blade.d02 {
-    transform: rotate(-30deg)
-}
-
-.spinner .blade.d02>div {
-    animation-delay: -.16666667s
-}
-
-.spinner .blade.d03 {
-    transform: rotate(-60deg)
-}
-
-.spinner .blade.d03>div {
-    animation-delay: -.33333333s
-}
-
-.spinner .blade.d04 {
-    transform: rotate(-90deg)
-}
-
-.spinner .blade.d04>div {
-    animation-delay: -.5s
-}
-
-.spinner .blade.d05 {
-    transform: rotate(-120deg)
-}
-
-.spinner .blade.d05>div {
-    animation-delay: -.66666667s
-}
-
-.spinner .blade.d06 {
-    transform: rotate(-150deg)
-}
-
-.spinner .blade.d06>div {
-    animation-delay: -.83333333s
-}
-
-.spinner .blade.d07 {
-    transform: rotate(-180deg)
-}
-
-.spinner .blade.d07>div {
-    animation-delay: -1s
-}
-
-.spinner .blade.d08 {
-    transform: rotate(-210deg)
-}
-
-.spinner .blade.d08>div {
-    animation-delay: -1.16666667s
-}
-
-.spinner .blade.d09 {
-    transform: rotate(-240deg)
-}
-
-.spinner .blade.d09>div {
-    animation-delay: -1.33333333s
-}
-
-.spinner .blade.d10 {
-    transform: rotate(-270deg)
-}
-
-.spinner .blade.d10>div {
-    animation-delay: -1.5s
-}
-
-.spinner .blade.d11 {
-    transform: rotate(-300deg)
-}
-
-.spinner .blade.d11>div {
-    animation-delay: -1.66666667s
-}
-
-.spinner .blade.d12 {
-    transform: rotate(-330deg)
-}
-
-.spinner .blade.d12>div {
-    animation-delay: -1.83333333s
-}
-
-@keyframes a {
-    0% {
+@keyframes fade-in {
+    from {
         opacity: 0
     }
     to {
@@ -593,19 +466,10 @@ dl:last-of-type dd:last-of-type p a:hover {
     }
 }
 
-.fadeIn {
+.fade-in {
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-name: a
-}
-
-@keyframes b {
-    0% {
-        opacity: 1
-    }
-    to {
-        opacity: 0
-    }
+    animation-name: fade-in;
 }
 
 .copy {
@@ -693,7 +557,7 @@ dl.logos:nth-of-type(odd) {
         position: absolute;
         width: 740px;
         left: 50%;
-        top: 75px;
+        top: 16px;
         margin-left: -375px;
         height: 50px
     }
@@ -1001,67 +865,6 @@ h3 img {
         padding: 20px 30px;
         font-size: 20px
     }
-}
-
-dl.widgets {
-    max-width: 825pt
-}
-
-dl.widgets,
-dl.widgets dt {
-    text-align: center;
-    margin: 0 auto 30px
-}
-
-dl.widgets dt {
-    max-width: 830px
-}
-
-dl.widgets dd {
-    display: none;
-    width: 100%;
-    max-width: 450px
-}
-
-dl.widgets dd p {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 0
-}
-
-dl.widgets dd iframe {
-    margin-top: 5px;
-    width: 100%;
-    max-width: 430px;
-    height: 127px
-}
-
-dl.widgets dd:last-of-type {
-    padding-top: 40px;
-    max-width: 550px
-}
-
-dl.widgets dd:last-of-type iframe {
-    max-width: 550px;
-    height: 25pc
-}
-
-@media screen and (min-width:480px) {
-    dl.widgets dd {
-        display: inline-block
-    }
-}
-
-dl.widgets code {
-    display: block;
-    width: 100%;
-    max-width: 680px;
-    overflow: hidden;
-    background: #646;
-    font-family: Courier New, mono;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 25px auto 0
 }
 
 .video {
