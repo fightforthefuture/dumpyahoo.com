@@ -166,9 +166,9 @@ body {
     font-size: 1.6rem;
     font-family: Open Sans, Arial, sans-serif;
     position: relative;
-    padding: 80px 15px;
-    color: #fff;
-    overflow-x: hidden
+    padding: 32px 15px;
+    color: #333;
+    overflow-x: hidden;
 }
 
 @media screen and (max-width: 767px) {
@@ -178,7 +178,13 @@ body {
 }
 
 a {
-    color: #e5bb2c
+    color: #137dda;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 h1,
@@ -333,7 +339,7 @@ dl:last-of-type em {
         display: inline-block;
         width: 65%;
         height: 10pc;
-        background: #051435;
+        background: #f1f4f9;
         vertical-align: top
     }
 }
@@ -353,7 +359,7 @@ dl:last-of-type dd:last-of-type p strong {
 }
 
 dl:last-of-type dd:last-of-type p a {
-    color: #fff;
+    color: #555;
     font-weight: 600;
     text-decoration: none
 }
@@ -734,13 +740,14 @@ dl:first-of-type #petition-form {
 dl:first-of-type #petition-form input,
 dl:first-of-type #petition-form select {
     display: block;
+    box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.08);
     margin-bottom: 15px;
     padding: 0 15px;
     font-weight: 600;
     width: 100%;
     height: 55px;
     line-height: 55px;
-    border: 1px solid #798db6;
+    border: 1px solid #ccc;
     border-radius: 5px;
     background: #fff;
     color: #000
@@ -751,19 +758,32 @@ dl:first-of-type #petition-form select[id=form-zip_code] {
     display: none
 }*/
 
-dl:first-of-type #petition-form input[type=submit],
-dl:first-of-type #petition-form select[type=submit] {
-    background: #0052f5;
+dl:first-of-type #petition-form input[type=submit] {
+    background-color: #137dda;
+    background-image: linear-gradient(#137dda, #0a71cc);
     border: 0 none;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.16);
     color: #fff;
+    cursor: pointer;
+    font-size: 1pc;
+    font-weight: 700;
     height: 72px;
     line-height: 72px;
-    font-weight: 700;
-    font-size: 1pc;
-    width: 100%;
     text-transform: uppercase;
-    cursor: pointer
+    transition: box-shadow 0.32s ease-out, transform 0.32s ease-out;
+    transform: translate3d(0, 0, 0);
+    width: 100%;
 }
+/*
+dl:first-of-type #petition-form input[type=submit]:hover {
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.16);
+    transform: scale(1.015) translate3d(0, 0, 0);
+}
+
+dl:first-of-type #petition-form input[type=submit]:active {
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.16);
+    transform: scale(1) translate3d(0, 0, 0);
+}*/
 
 @media screen and (min-width:480px) {
     dl:first-of-type #petition-form input[type=submit],
@@ -799,7 +819,8 @@ dl:first-of-type #petition-form select {
 
 dl:first-of-type #petition-form textarea {
     width: 100%;
-    border: 1px solid #798db6;
+    border: 1px solid #ccc;
+    box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.08);
     border-radius: 5px;
     background: #fff;
     color: #000;
