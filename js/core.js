@@ -90,7 +90,9 @@ window.components.petitions = function (doc, win) {
     countryInput = doc.getElementById('hidden-country'),
     countrySelect = doc.getElementById('select-country'),
     countryLabel = doc.querySelector('[for="select-country"]'),
-    queryString = win.util.parseQueryString();
+    queryString = win.util.parseQueryString(),
+    disclosure = body.querySelector('span.disclosure'),
+    org = 'fftf';
 
   function numberCommafier(number) {
     /**
@@ -230,14 +232,13 @@ window.components.petitions = function (doc, win) {
       var formData = new FormData();
       formData.append('guard', '');
       formData.append('hp_enabled', true);
-      formData.append('org', 'fftf');
+      formData.append('org', org);
       formData.append('an_tags', JSON.stringify(tags));
       formData.append('an_url', win.location.href);
       formData.append('an_petition', petitionSignatureForm.action.replace('/signatures', ''));
       formData.append('member[first_name]', doc.getElementById('form-first_name').value);
       formData.append('member[email]', doc.getElementById('form-email').value);
       formData.append('member[postcode]', doc.getElementById('form-zip_code').value);
-      formData.append('member[country]', countrySelect.value);
 
       if (doc.getElementById('opt-in') && doc.getElementById('opt-in').getAttribute('type') === 'checkbox' && doc.getElementById('opt-in').checked === false) {
         formData.append('opt_out', true);
@@ -297,6 +298,33 @@ window.components.petitions = function (doc, win) {
   function init() {
     requestAPIInfo();
     addEventListeners();
+    parseOrg();
+  }
+
+  function parseOrg() {
+    switch (queryString.org) {
+
+      case 'dp':
+        org = 'dp';
+        disclosure.innerHTML = '<a href="https://demandprogress.org">Demand Progress</a> will email you with updates on this and other important issues. <a href="https://demandprogress.org/privacy">Privacy Policy</a>';
+        break;
+
+      case 'fop':
+        org = 'fop';
+        disclosure.innerHTML = '<a href="https://freedom.press">Freedom of the Press Foundation</a> will email you with updates on this and other important issues. <a href="https://freedom.press/privacy-policy">Privacy Policy</a>';
+        break;
+
+      case 'om':
+        org = 'om';
+        disclosure.innerHTML = '<a href="https://openmedia.org/">Open Media</a> will email you with updates on this and other important issues. <a href="https://openmedia.org/en/privacy-policy">Privacy Policy</a>';
+        break;
+
+      default:
+        org = 'fftf';
+        disclosure.innerHTML = '<a href="https://www.fightforthefuture.org">Fight for the Future</a> will email you with updates on this and other important issues. <a href="https://www.fightforthefuture.org/privacy">Privacy Policy</a>';
+        break;
+
+    }
   }
 
   init();
