@@ -222,9 +222,9 @@ h1 strong {
 }
 
 h2 {
-    font-weight: 600;
+    font-weight: 700;
     padding-top: 40px;
-    font-size: 20px;
+    font-size: 18px;
     max-width: 830px;
     margin: 0 auto 30px;
     text-align: center
@@ -232,7 +232,7 @@ h2 {
 
 @media screen and (min-width:480px) {
     h2 {
-        font-size: 36px
+        font-size: 22px
     }
 }
 

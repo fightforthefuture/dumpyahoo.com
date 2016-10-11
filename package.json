@@ -1,0 +1,10 @@
+{
+  "name" : "dump-yahoo",
+  "version" : "0.0.1",
+  "dependencies" : {
+    "express" : "4.x"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
