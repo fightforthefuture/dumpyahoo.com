@@ -319,6 +319,11 @@ window.components.petitions = function (doc, win) {
         disclosure.innerHTML = '<a href="https://openmedia.org/">Open Media</a> will email you with updates on this and other important issues. <a href="https://openmedia.org/en/privacy-policy">Privacy Policy</a>';
         break;
 
+      case 'rt4':
+        org = 'rt4';
+        disclosure.innerHTML = '<a href="https://restorethe4th.com/">Restore the Fourth</a> will email you with updates on this and other important issues. <a href="https://restorethe4th.com/privacy-policy/">Privacy Policy</a>';
+        break;
+
       default:
         org = 'fftf';
         disclosure.innerHTML = '<a href="https://www.fightforthefuture.org">Fight for the Future</a> will email you with updates on this and other important issues. <a href="https://www.fightforthefuture.org/privacy">Privacy Policy</a>';
