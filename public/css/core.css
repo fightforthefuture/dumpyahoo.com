@@ -852,7 +852,36 @@ span.disclosure label:hover {
     background: #eee
 }
 
+h3 {
+    display: none;
+    opacity: 0;
+    margin: 0 auto 15px;
+    max-width: 45pc;
+    background: #444;
+    color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: height 1s linear;
+    padding: 15px;
+    font-size: 17px;
+    text-align: center;
+    font-weight: 700;
+    transition: opacity .4s linear
+}
 
+h3 img {
+    max-width: 150px;
+    max-height: 150px;
+    display: block;
+    margin: 15px auto 30px
+}
+
+@media screen and (min-width:480px) {
+    h3 {
+        padding: 20px 30px;
+        font-size: 20px
+    }
+}
 
 .video {
     max-width: 666px;
